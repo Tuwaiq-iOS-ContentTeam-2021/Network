@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Concurrency
+//  NetworkPractice
 //
 //  Created by Ahmad MacBook on 21/12/2021.
 //
