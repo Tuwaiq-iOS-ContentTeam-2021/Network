@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NetworkSession2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="JrQ-ue-yYo">
+                                <rect key="frame" x="20" y="103" width="374" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="O8F-Q0-eve"/>
+                                    <constraint firstAttribute="height" constant="759" id="rvG-M5-iT9"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="407" id="PMC-og-CKM" customClass="imagesTableViewCell" customModule="NetworkSession2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="407"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PMC-og-CKM" id="CZp-64-iEs">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="407"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eBe-l8-Jig">
+                                                    <rect key="frame" x="0.0" y="11" width="374" height="385"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="374" id="3Ac-GM-Arr"/>
+                                                        <constraint firstAttribute="height" constant="385" id="KbS-OR-IN8"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="eBe-l8-Jig" firstAttribute="leading" secondItem="CZp-64-iEs" secondAttribute="leading" id="9Tb-pU-BQS"/>
+                                                <constraint firstAttribute="trailing" secondItem="eBe-l8-Jig" secondAttribute="trailing" id="JX9-So-XiR"/>
+                                                <constraint firstItem="eBe-l8-Jig" firstAttribute="top" secondItem="CZp-64-iEs" secondAttribute="top" constant="11" id="xdd-T1-8ua"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="myImage" destination="eBe-l8-Jig" id="JTZ-le-7dl"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="KmS-h3-mBe"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="8JF-Kd-u8A"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.91372549020000005" green="0.92941176469999998" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="JrQ-ue-yYo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="59" id="eMG-3g-410"/>
+                            <constraint firstItem="JrQ-ue-yYo" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="tRq-UM-eqW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JrQ-ue-yYo" secondAttribute="trailing" constant="20" id="w1Y-O4-QuM"/>
+                            <constraint firstItem="JrQ-ue-yYo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xza-JV-hgD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imagesTableView" destination="JrQ-ue-yYo" id="DTi-Fh-03A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="43.526785714285715"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
