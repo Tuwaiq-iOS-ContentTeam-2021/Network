@@ -7,14 +7,9 @@
 
 import UIKit
 
-typealias customType = (title: String, image: String, date_taken: String )
 
 class ViewController: UIViewController {
-    //..
-    var arrOfMedia = [Media]()
-    //..
     var imagesUrls: [String] = []
-    var myModelArray: [customType] = []
     
     @IBOutlet weak var myTableView: UITableView!
     
@@ -22,7 +17,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         myTableView.delegate = self
         myTableView.dataSource = self
-        myTableView.backgroundColor = .red
+//        myTableView.backgroundColor = .lightGray
+        self.myTableView.rowHeight = myTableView.frame.width
         
         setup()
     }
@@ -37,17 +33,15 @@ class ViewController: UIViewController {
             
         do {
             let decoder = JSONDecoder()
-            let decoderData =  try decoder.decode(myModelArray.self, from: jsonData)
+            let decoderData =  try decoder.decode(MyModel.self, from: jsonData)
             print(decoderData.title)
             
-            self.myModelArray.removeAll()
+            self.imagesUrls.removeAll()
+            
             decoderData.items.forEach { item in
-                let title = item.title
-                let date_taken = item.date_taken
                 let newImage = item.media.m
                 
-                let thisModel: customType = (title: title, image: newImage, date_taken: date_taken)
-                self.myModelArray.append(thisModel)
+                self.imagesUrls.append(newImage)
             }
             
             DispatchQueue.main.async{
@@ -65,14 +59,14 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        100
+        return imagesUrls.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = myTableView.dequeueReusableCell(withIdentifier: "myCell") as! MyTableViewCell
-        let thisItem = self.myModelArray[indexPath.row]
-        let url = URL(string: thisItem.image)!
+        let thisItem = self.imagesUrls[indexPath.row]
+        let url = URL(string: thisItem)!
 
         do {
             let data = try Data(contentsOf: url)
@@ -84,7 +78,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        400
+        return myTableView.frame.width/2
     }
     
 

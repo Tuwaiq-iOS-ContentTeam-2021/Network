@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4C2DA5F2773B92E0043D069 /* MyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C2DA5E2773B92E0043D069 /* MyModel.swift */; };
 		E614E5DC2771E3F500807506 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E614E5DB2771E3F500807506 /* AppDelegate.swift */; };
 		E614E5DE2771E3F500807506 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E614E5DD2771E3F500807506 /* SceneDelegate.swift */; };
 		E614E5E02771E3F500807506 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E614E5DF2771E3F500807506 /* ViewController.swift */; };
@@ -14,11 +15,10 @@
 		E614E5E52771E3F600807506 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E614E5E42771E3F600807506 /* Assets.xcassets */; };
 		E614E5E82771E3F600807506 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E614E5E62771E3F600807506 /* LaunchScreen.storyboard */; };
 		E614E5F02771E45900807506 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E614E5EF2771E45900807506 /* MyTableViewCell.swift */; };
-		E614E5F22771EEB500807506 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E614E5F12771EEB500807506 /* ViewController2.swift */; };
-		E6E3878E2773B6FD00188E15 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E3878D2773B6FD00188E15 /* DataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D4C2DA5E2773B92E0043D069 /* MyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyModel.swift; sourceTree = "<group>"; };
 		E614E5D82771E3F500807506 /* FlickerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E614E5DB2771E3F500807506 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E614E5DD2771E3F500807506 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,8 +28,6 @@
 		E614E5E72771E3F600807506 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E614E5E92771E3F600807506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E614E5EF2771E45900807506 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
-		E614E5F12771EEB500807506 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
-		E6E3878D2773B6FD00188E15 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,12 +64,11 @@
 				E614E5DD2771E3F500807506 /* SceneDelegate.swift */,
 				E614E5DF2771E3F500807506 /* ViewController.swift */,
 				E614E5EF2771E45900807506 /* MyTableViewCell.swift */,
+				D4C2DA5E2773B92E0043D069 /* MyModel.swift */,
 				E614E5E12771E3F500807506 /* Main.storyboard */,
 				E614E5E42771E3F600807506 /* Assets.xcassets */,
 				E614E5E62771E3F600807506 /* LaunchScreen.storyboard */,
 				E614E5E92771E3F600807506 /* Info.plist */,
-				E614E5F12771EEB500807506 /* ViewController2.swift */,
-				E6E3878D2773B6FD00188E15 /* DataModel.swift */,
 			);
 			path = FlickerApp;
 			sourceTree = "<group>";
@@ -147,12 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E614E5F22771EEB500807506 /* ViewController2.swift in Sources */,
+				D4C2DA5F2773B92E0043D069 /* MyModel.swift in Sources */,
 				E614E5E02771E3F500807506 /* ViewController.swift in Sources */,
 				E614E5F02771E45900807506 /* MyTableViewCell.swift in Sources */,
 				E614E5DC2771E3F500807506 /* AppDelegate.swift in Sources */,
 				E614E5DE2771E3F500807506 /* SceneDelegate.swift in Sources */,
-				E6E3878E2773B6FD00188E15 /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
