@@ -31,7 +31,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! imageViewCell
-        cell.imgView.image = ImageArray[indexPath.row]
+        cell.imgView?.image = ImageArray[indexPath.row]
         return cell
     }
 
@@ -50,12 +50,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 
                 decodeData.items.forEach { item in
                     let myimage = item.media.m
+                    print(myimage)
                     let Uiimage = self.transImage(from: myimage)
                     self.ImageArray.append(Uiimage!)
                 }
 
             }catch {
-                print(error.localizedDescription)
+                print(error)
             }
         
         
@@ -99,17 +100,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
 //my struct JSON
 struct DataModel : Codable {
-    var items : [Image]
+    var items : [Items]
 
 }
 
-struct Image : Codable {
+struct Items : Codable {
     var media : Media
     
 }
     struct Media : Codable {
         var m : String
-        
+     
     }
  
 
